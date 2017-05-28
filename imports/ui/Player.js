@@ -5,13 +5,13 @@ import {Players} from './../api/players';
 
 export default class Player extends React.Component {
   render() {
-    let { name, score, _id } = this.props.player;
+    let { name, score, _id, rank, position } = this.props.player;
     return (
       <div className="item">
         <div className="player">
           <div>
             <h3 className="player__name">{name}</h3>
-            <p className="player__stats">{score} point(s).</p>
+            <p className="player__stats">{rank} {position} {score} point(s).</p>
           </div>
           <div className="player__actions">
             <button className="button button--round" onClick={() => {
